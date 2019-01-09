@@ -85,14 +85,14 @@ class AutoController extends Controller
             'Color' => 'required',
         ]);
         
-        $auto = Auto::find($request->id);
-        $auto->Modelo = $request->get('Modelo');
-        $auto->Marca = $request->get('Marca');
-        $auto->Color = $request->get('Color');
-        $auto->save();
+        //$auto = Auto::find($request->id);
+        //$auto->Modelo = $request->get('Modelo');
+        //$auto->Marca = $request->get('Marca');
+        //$auto->Color = $request->get('Color');
+        //$auto->save();
 
 
-        //$auto->update($request->all());
+        $auto->update($request->all());
         Session::flash('message','Vehiculo Modificado Correctamente');
         return redirect()->route('autos.index');
     }
